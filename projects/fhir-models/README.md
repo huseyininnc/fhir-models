@@ -1,24 +1,67 @@
-# FhirModels
+# Fhir Models
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+A powerful library providing R4, R4B, and R5 resource models for FHIR. This package simplifies handling FHIR resources with flexible interfaces and type-safe utilities tailored to various FHIR versions.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name --project fhir-models` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project fhir-models`.
-> Note: Don't forget to add `--project fhir-models` or else it will be added to the default project in your `angular.json` file. 
+- Comprehensive interfaces for R4, R4B, and R5 FHIR resources
+- Flexible type generation for FHIR resources
+- Version-specific Bundles (`BundleForVersion`)
+- Version-specific Resource Types (`ResourceForVersion`)
 
-## Build
+## Installation
 
-Run `ng build fhir-models` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install the package using NPM:
 
-## Publishing
+```bash
+  npm install @huseyininanc/fhir-models
+```
 
-After building your library with `ng build fhir-models`, go to the dist folder `cd dist/fhir-models` and run `npm publish`.
+## Usage/Examples
 
-## Running unit tests
+### Resource Types for R4, R4B, and R5
 
-Run `ng test fhir-models` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Effortlessly import resource types from different FHIR versions:
 
-## Further help
+```typescript
+import * as R4 from "@huseyininanc/fhir-models";
+import * as R4B from "@huseyininanc/fhir-models";
+import * as R5 from "@huseyininanc/fhir-models";
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+var patientR4: R4.Patient;
+var patientR4B: R4B.Patient;
+var patientR5: R5.Patient;
+```
+
+### BundleForVersion
+
+Use `BundleForVersion` to work with Bundles customized for specific FHIR versions and resource types:
+
+```typescript
+
+import { BundleForVersion } from "@huseyininanc/fhir-models";
+
+// Define an R4 Bundle for the Patient resource
+type R4BundlePatientType = BundleForVersion<'R4', 'Patient'>;
+
+// Define an R5 Bundle for the Observation resource
+type R5BundleObservationType = BundleForVersion<'R5', 'Observation'>;
+```
+
+### ResourceForVersion
+
+With ResourceForVersion, you can access the correct resource type for a given FHIR version:
+
+```typescript
+import { ResourceForVersion } from "@huseyininanc/fhir-models";
+
+// Define R4 Patient type
+type R4PatientType = ResourceForVersion<'R4', 'Patient'>;
+
+// Define R5 Observation type
+type R5ObservationType = ResourceForVersion<'R5', 'Observation'>;
+```
+
+## Authors
+
+Developed and maintained by [@huseyininnc](https://github.com/huseyininnc)
