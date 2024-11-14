@@ -1,6 +1,11 @@
 {
   "name": "fhir-lib-core",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huseyininnc/fhir-models.git"
+  },
+  "homepage": "https://github.com/huseyininnc/fhir-models",
   "description": "FHIR models library with R4, R4B, and R5 Resource models",
   "keywords": [
     "FHIR",
