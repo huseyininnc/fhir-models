@@ -1,6 +1,19 @@
 {
   "name": "fhir-lib-core",
   "version": "0.0.0",
+  "description": "FHIR models library with R4, R4B, and R5 Resource models",
+  "keywords": [
+    "FHIR",
+    "healthcare",
+    "models",
+    "R4",
+    "R4B",
+    "R5",
+    "TypeScript",
+    "health-data"
+  ],
+  "author": "Huseyin Inanc",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
