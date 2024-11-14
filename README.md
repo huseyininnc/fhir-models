@@ -50,7 +50,7 @@ type R5BundleObservationType = BundleForVersion<'R5', 'Observation'>;
 
 ### ResourceForVersion
 
-With ResourceForVersion, you can access the correct resource type for a given FHIR version:
+With `ResourceForVersion`, you can access the correct resource type for a given FHIR version:
 
 ```typescript
 import { ResourceForVersion } from "@huseyininanc/fhir-models";
