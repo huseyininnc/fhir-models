@@ -24,9 +24,7 @@ Install the package using NPM:
 Effortlessly import resource types from different FHIR versions:
 
 ```typescript
-import * as R4 from "@huseyininanc/fhir-models";
-import * as R4B from "@huseyininanc/fhir-models";
-import * as R5 from "@huseyininanc/fhir-models";
+import { R4, R4B, R5 } from "@huseyininanc/fhir-models";
 
 var patientR4: R4.Patient;
 var patientR4B: R4B.Patient;
